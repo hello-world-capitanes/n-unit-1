@@ -4,7 +4,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Scoring.Core.Interfaces;
+using Scoring.Core.Interfaces.CalculatePreScoring;
 using Scoring.Core.Services;
+using Scoring.Core.Services.CalculatePreScoring;
 using Scoring.Logger;
 
 namespace Colegiados.Api
@@ -28,6 +30,9 @@ namespace Colegiados.Api
             //services
             services.AddTransient<ILlamadaService, LlamadaService>();
             services.AddTransient<IPreSolicitudRenting, PreSolicitudRenting>();
+            services.AddTransient<IApprovePreRequestProcess, ApprovePreRequestProcess>();
+
+            //Añadir mas servicios cuando se creeen
 
             services.AddTransient<ILogger, LoggerImpl>();
             

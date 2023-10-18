@@ -19,15 +19,23 @@ namespace Scoring.Core.UnitTest
         [Test]
         public void Test_CalculatePreRequest_ShouldBeTrue_When_ApprovedRulesTrue()
         {
+            //Given
             this.approvePreRequestProcessMock.Setup(a => a.ApprovedRules()).Returns(true);
-            Assert.IsTrue(this.service.CalculatePreRequest());            
+            //When
+            bool resultado = this.service.CalculatePreRequest();
+            //Then
+            Assert.IsTrue(resultado);
         }
 
         [Test]
         public void Test_CalculatePreRequest_ShouldBeFalse_When_ApprovedRulesFalse()
         {
+            //Given
             this.approvePreRequestProcessMock.Setup(a => a.ApprovedRules()).Returns(false);
-            Assert.IsFalse(this.service.CalculatePreRequest());
+            //When
+            bool resultado = this.service.CalculatePreRequest();
+            //Then
+            Assert.IsFalse(resultado);
         }
     }
 }
