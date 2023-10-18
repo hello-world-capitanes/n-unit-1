@@ -2,7 +2,7 @@
 
 namespace Scoring.Core.Services.CalculatePreScoring
 {
-    internal class DenyRules : IDenyRules
+    public class DenyPreRequestProcess : IDenyRules
     {
         public bool DenniedRules()
         {

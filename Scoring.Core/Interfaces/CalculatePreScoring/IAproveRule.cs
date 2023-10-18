@@ -5,11 +5,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Scoring.Core.Interfaces
+namespace Scoring.Core.Interfaces.CalculatePreScoring
 {
-    public interface IPreSolicitudRenting
+    public interface IAproveRule
     {
-        bool CalculatePreRequest(Solicitud solicitud);
-        
+        public bool IsApproved(Solicitud solicitud);
     }
 }

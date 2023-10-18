@@ -28,8 +28,10 @@ namespace Scoring.Api.Controllers
 
             _logger.LogDebug("calculatePreScoring.");
             base.RegistraInicioLlamada();
-            
-            bool resultado = this._preSolicitud.CalculatePreRequest();
+
+            Solicitud solicitud = new Solicitud();
+
+            bool resultado = this._preSolicitud.CalculatePreRequest(solicitud);
 
             _llamadaService.LogLLamada(new LlamadaEntity {
                 UrlOrigen = base.GetUrlOrigen(),
