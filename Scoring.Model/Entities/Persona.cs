@@ -2,7 +2,7 @@
 
 namespace Scoring.Model.Entities
 {
-    internal class Persona
+    public class Persona
     {
         public DateTime FechaNacimiento { get; set; }
         public double IngresosNetosAunales { get; set; } //Autonomo y/o asalariado
