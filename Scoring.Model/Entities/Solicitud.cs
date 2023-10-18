@@ -10,6 +10,6 @@ namespace Scoring.Model.Entities
         public double Cuota { get; set; }
         public int PlazoMeses { get; set; }
         public DateTime FechaInicio { get; set; }
-        public Persona cliente { get; set;}
+        public Persona cliente { get; set; }
     }
 }
