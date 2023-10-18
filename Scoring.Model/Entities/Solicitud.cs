@@ -2,7 +2,7 @@
 
 namespace Scoring.Model.Entities
 {
-    internal class Solicitud
+    public class Solicitud
     {
         public DateTime FechaSolicitud { get; set; }
         public int NumVehiculos { get; set; }

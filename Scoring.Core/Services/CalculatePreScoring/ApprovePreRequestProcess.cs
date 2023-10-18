@@ -1,13 +1,27 @@
 ﻿
 using Scoring.Core.Interfaces.CalculatePreScoring;
+using Scoring.Model.Entities;
 
 namespace Scoring.Core.Services.CalculatePreScoring
 {
     public class ApprovePreRequestProcess : IApprovePreRequestProcess
     {
-        public bool ApprovedRules()
+        private IAproveRule _validarNacionalidadRule;
+        public ApprovePreRequestProcess(IAproveRule validarNacionalidadRule)
         {
-            return true;
+            _validarNacionalidadRule = validarNacionalidadRule;
+        }
+
+        public bool ApprovedRules(Solicitud solicitud)
+        {
+            if (_validarNacionalidadRule.IsApproved(solicitud))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }

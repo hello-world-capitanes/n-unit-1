@@ -29,4 +29,8 @@
     <ProjectReference Include="..\Scoring.Model\Scoring.Model.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Services\CalculatePreScoring\DenyRules\" />
+  </ItemGroup>
+
 </Project>
