@@ -33,5 +33,21 @@ namespace Scoring.Core.UnitTest.CalculatePreScoring.ApproveRules
             //Then
             Assert.IsTrue(resultado);
         }
+
+        [Test]
+        public void Should_False_When_Nacionalidad_NoEspaniola()
+        {
+            //Given
+            Solicitud solicitud = new Solicitud();
+            solicitud.cliente = new Persona();
+
+            solicitud.cliente.Nacionalidad = "Portugesa";
+
+            //When
+            bool resultado = _validarNacionalidad.IsApproved(solicitud);
+
+            //Then
+            Assert.IsFalse(resultado);
+        }
     }
 }
