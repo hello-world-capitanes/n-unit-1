@@ -32,6 +32,8 @@ namespace Colegiados.Api
             services.AddTransient<IPreSolicitudRenting, PreSolicitudRenting>();
             services.AddTransient<IApprovePreRequestProcess, ApprovePreRequestProcess>();
 
+            //Añadir mas servicios cuando se creeen
+
             services.AddTransient<ILogger, LoggerImpl>();
             
             services.AddMvc();
