@@ -7,12 +7,14 @@ namespace Scoring.Core.Services.CalculatePreScoring.AproveRules
     {
         public bool IsApproved(Solicitud solicitud)
         {
-            if (solicitud.cliente.Nacionalidad != null)
+            if (solicitud.cliente.Nacionalidad != null && solicitud.cliente.Nacionalidad == "Espaniola")
             {
                 return true;
             }
             else
+            {
                 return false;
+            }
         }
     }
 }
